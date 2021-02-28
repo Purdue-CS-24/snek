@@ -27,7 +27,8 @@ let update = () => {
         ctx.fillRect(t.x / 30 * canvas.width, t.y / 30 * canvas.height, 1 / 30 * canvas.width - 1, 1 / 30 * canvas.height - 1);
 
         if (t != trail[trail.length - 1] && trail[trail.length - 1].x == t.x && trail[trail.length - 1].y == t.y) {
-            alert("game over");
+            dx = 0;
+            dy = 0;
             x = 15;
             y = 15;
             trail = [{x: x, y: y}, {x: x - 1, y: y}, {x: x - 2, y: y}].reverse();
